@@ -7,7 +7,7 @@ import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 const Tab = createBottomTabNavigator();
 
-export default function App() {
+export default function App() {  // tuo fontti tähän jos haluat (Reiman luennoilla ohje)
   return (
     <NavigationContainer>
     <Tab.Navigator

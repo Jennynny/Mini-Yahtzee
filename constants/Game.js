@@ -4,6 +4,6 @@ export const MIN_SPOT = 1;
 export const MAX_SPOT = 6;
 export const BONUS_POINTS_LIMIT = 63;
 export const BONUS_POINTS = 50;
-export const NBR_OF_SCOREBOARD_ROWS = 7;
-//7 parasta on tässä eli tän voinee muuttaa?
+export const NBR_OF_SCOREBOARD_ROWS = 10;
+//10 tulosta
 export const SCOREBOARD_KEY = '@scoreboardtemp';
