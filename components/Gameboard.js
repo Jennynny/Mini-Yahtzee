@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Text, View, Pressable, TouchableOpacity } from "react-native";
+import { Text, View, Pressable, TouchableOpacity, ScrollView } from "react-native";
 import Header from "./Header";
 import Footer from "./Footer";
 import styles from '../style/Style';
@@ -161,7 +161,7 @@ export default Gameboard = ({navigation, route}) => {
             name: playerName,
             date: formattedDate, //'pvm',//päivämäärä tänne funktiolla
             time: formattedTime, //'klo', //kellonaika tänne funktiolla
-            points: totalPoints//0//dicePointsTotal // yhteispisteet (mahdollinen bonus mukaan)
+            points: totalPoints // yhteispisteet (mahdollinen bonus mukaan)
         }
         try {
             const newScore = [...scores,playerPoints]; // Add new score to the array
@@ -255,6 +255,7 @@ export default Gameboard = ({navigation, route}) => {
         }
     return(
         <>
+        <ScrollView>
         <Header />
         <View style = {styles.container}>
             <Text style={styles.player}>Player: {playerName}</Text>
@@ -263,10 +264,10 @@ export default Gameboard = ({navigation, route}) => {
            </Container>
            <Text>Throws left:{nbrOfThrowsLeft}</Text>
            <Text>{status}</Text>
-           <Pressable
+           <TouchableOpacity 
            onPress={()=>throwDices()}
-           ><Text>THROW DICES</Text>
-           </Pressable>
+           ><Text style={styles.throwB}>THROW DICES</Text>
+           </TouchableOpacity>
            <Container fluid>
             <Row>{pointsRow}</Row>
            </Container>
@@ -291,6 +292,7 @@ export default Gameboard = ({navigation, route}) => {
                 ><Text style= {styles.restartB}>RESTART GAME</Text></TouchableOpacity>
         </View>
         <Footer />
+        </ScrollView>
         </>
     )
 }

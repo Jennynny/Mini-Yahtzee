@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Text, View, Pressable } from "react-native";
+import { Text, View, Pressable,TouchableOpacity } from "react-native";
 import { DataTable } from "react-native-paper";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -42,11 +42,17 @@ export default Scoreboard = ({ navigation }) => {
         }
     }
 
+    const restartGame = () => {
+        navigation.reset({
+            index: 1,
+            routes: [{name: 'Gameboard'}]
+        })
+    }
 
     return(
         <>
         <Header />
-        <View>
+        <View style ={styles.container}>
             <Text>Scoreboard here...</Text>
            { scores.length === 0 ?
             <Text>Scoreboar is empty</Text>
@@ -68,6 +74,9 @@ export default Scoreboard = ({ navigation }) => {
             onPress={() => clearScoreboard()}>
                 <Text>CLEAR SCOREBOARD</Text>
             </Pressable>
+            <TouchableOpacity
+                 onPress={() => restartGame()} // Add the reset button
+                ><Text style= {styles.restartB}>RESTART GAME</Text></TouchableOpacity>
         </View>
         <Footer />
         </>

@@ -23,10 +23,10 @@ export default Home = ({navigation}) => {
         <ScrollView>
         <Header />
         <View style ={styles.container}>
-        <MaterialCommunityIcons name="information" size={90} color="black" /> 
+        <MaterialCommunityIcons style={styles.infoI} name="information" size={80} color='#1D1A39' /> 
             {!hasPlayerName ?
             <>
-            <Text style={styles.headline}>First type your name:</Text>
+            <Text style={styles.headline1}>First type your name:</Text>
             <TextInput onChangeText={setPlayerName} autoFocus={true} style={styles.inputName}/>
             <TouchableOpacity
                 onPress={() => handlePlayerName(playerName)}

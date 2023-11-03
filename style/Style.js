@@ -2,30 +2,34 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   container: {
+    
     flex: 1,
-    backgroundColor: '#4c9293'
+    backgroundColor: '#451952'
   },
   header: {
-    marginTop: 10,
+    marginTop: 5,
     //marginBottom: 15,
-    backgroundColor: '#37a3a5',
+    backgroundColor: '#1D1A39',
     flexDirection: 'row',
   },
   footer: {
     //marginTop: 20,
-    backgroundColor: '#37a3a5',
+    backgroundColor: '#1D1A39',
     flexDirection: 'row'
   },
   title: {
-    color: '#fff',
+    color: '#E5D9B6',
     fontWeight: 'bold',
     flex: 1,
     fontSize: 33,
     textAlign: 'center',
     margin: 10,
   },
+  infoI:{ //infopallero
+    margin: 10
+  },
   author: {
-    color: '#fff',
+    color: '#E5D9B6',
     fontWeight: 'bold',
     flex: 1,
     fontSize: 15,
@@ -68,7 +72,14 @@ export default StyleSheet.create({
   homeBg:{
     backgroundColor: '#afb0b0'
   },
-  inputName:{
+  headline1:{ //First type your name:
+    fontSize:20,
+    fontWeight: 'bold',
+    textAlign: 'left', 
+    marginBottom: 10,
+    marginLeft: 15, 
+  },
+  inputName:{ //kirjoita nimesi?
     borderWidth: 2,
     borderRadius: 5,
     padding: 10,
@@ -82,28 +93,28 @@ export default StyleSheet.create({
   enterB:{ //ensimmäin näkymä ja nimen alapuolella oleva button
     borderWidth: 2,
     borderRadius: 5,
-    color: 'white',
-    backgroundColor: '#ae057b',
+    color: '#E5D9B6',
+    backgroundColor: '#9F014D',
     padding: 15,
     margin: 10,
-    //marginTop: 20,
+    marginBottom: 40,
     textAlign: 'center',
     fontSize: 20,
     fontWeight: 'bold',
     borderColor:'#000000'
   },
-  headline: {
-    fontSize:25,
+  headline: { //koskettaa ainakin home.js Rules of the game
+    fontSize:30,
     fontWeight: 'bold',
     textAlign: 'center', 
     marginBottom: 20,
-    marginTop: 10, 
+    //marginTop: 10, 
   },
     playB: { //Ohjeiden jälkein button
     borderWidth: 2,
     borderRadius: 5,
     color: 'white',
-    backgroundColor: '#ae057b',
+    backgroundColor: '#9F014D',
     padding: 15,
     margin: 10,
     marginBottom:20,
@@ -113,28 +124,31 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     borderColor:'#000000'
   },
-  infoText: {
+  infoText: { //Rules of the game, Home.js
     marginLeft: 15,
     marginRight: 15,
     fontSize: 15,
 
   },
-  infoText2: {
-    fontSize: 20,
+  infoText2: { //Good luck, Home.js
+    fontSize: 25,
     //marginLeft:20, //miten saa keskelle tekstin??
     textAlign:'center',
     margin: 10,
+    fontWeight: 'bold',
 
   },
-  headlineInfotext:{
+  headlineInfotext:{ //Rules of the game, Home.js, tekstien otsikot
     fontSize: 20,
-    marginLeft:12
+    marginLeft:12,
+    margin:12,
+    
   },
   player:{ //gameboard
-    fontSize: 20,
+    fontSize: 25,
     textAlign: 'center',
     fontWeight: 'bold',
-    margin: 10,
+    margin: 20,
   },
   totalPoints:{ //gameboard
     fontSize:25,
@@ -146,7 +160,7 @@ export default StyleSheet.create({
     borderWidth: 2,
     borderRadius: 5,
     color: 'white',
-    backgroundColor: '#ae057b',
+    backgroundColor: '#9F014D',
     padding: 15,
     margin: 10,
     marginBottom:20,
@@ -157,12 +171,12 @@ export default StyleSheet.create({
     borderColor:'#000000'
 
   },
-  restartB:{ //gameboard
+  restartB:{ //gameboard Käynnistä uudelleen!
     borderWidth: 2,
     borderRadius: 4,
     color: 'white',
     backgroundColor: '#a50505',
-    padding: 15,
+    padding: 5,
     margin: 10,
     marginBottom:20,
     //marginTop: 20,
@@ -170,8 +184,22 @@ export default StyleSheet.create({
     fontSize: 15,
     fontWeight: 'bold',
     borderColor:'#000000',
-    width:150,
+    width:130,
     alignSelf: 'center'
      
+  },
+  throwB:{ //gameboard, Heitä nopat
+    borderWidth: 2,
+    borderRadius: 5,
+    color: 'white',
+    backgroundColor: '#9F014D',
+    padding: 15,
+    margin: 10,
+    marginBottom:20,
+    //marginTop: 20,
+    textAlign: 'center',
+    fontSize: 20,
+    fontWeight: 'bold',
+    borderColor:'#000000'
   },
 });
