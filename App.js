@@ -37,8 +37,8 @@ export default function App() {  // tuo fontti tähän jos haluat (Reiman luenno
           color={color}
           />
         },
-        tabBarActiveTintColor: 'steelblue',
-        tabBarInActiveTintColor: 'gray'
+        tabBarActiveTintColor: "#2DB29B",
+        tabBarInActiveTintColor: 'black'
       })}
     >
       <Tab.Screen name="Home" component={Home} options={{tabBarStyle: {display:"none"}}}/>

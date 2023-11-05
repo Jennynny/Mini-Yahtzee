@@ -31,7 +31,7 @@ export default Home = ({navigation}) => {
             <TouchableOpacity
                 onPress={() => handlePlayerName(playerName)}
                 ><Text style={styles.enterB}>OK</Text>
-                </TouchableOpacity>
+            </TouchableOpacity>
             </>
             :
             <>
@@ -39,11 +39,13 @@ export default Home = ({navigation}) => {
             <Text style = {styles.headlineInfotext}>THE GAME:</Text>
             <Text style={styles.infoText} multiline ="true">
             Upper section of the classic Yahtzee
-            dice game. You have {NBR_OF_DICES} dices and
-            for the every dice you have {NBR_OF_THROWS}
-            throws. After each throw you can keep dices in
+            dice game. 
+            You have {NBR_OF_DICES} dices and
+            for the every dice you have {NBR_OF_THROWS} throws. 
+            After each throw you can keep dices in
             order to get same dice spot counts as many as
-            possible. In the end of the turn you must select
+            possible. 
+            In the end of the turn you must select
             your points from {MIN_SPOT} to {MAX_SPOT}.
             Game ends when all points have been selected.
             The order for selecting those is free.

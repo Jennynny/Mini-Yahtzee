@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Text, View, Pressable,TouchableOpacity } from "react-native";
+import { Text, View, Pressable,TouchableOpacity, ScrollView } from "react-native";
 import { DataTable } from "react-native-paper";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -24,6 +24,7 @@ export default Scoreboard = ({ navigation }) => {
             const jsonValue = await AsyncStorage.getItem(SCOREBOARD_KEY);
             if (jsonValue !== null) {
                 let tmpScores = JSON.parse(jsonValue);
+                tmpScores.sort((a,b) => b.points - a.points);
                 setScores (tmpScores);
             }
         } 
@@ -51,11 +52,12 @@ export default Scoreboard = ({ navigation }) => {
 
     return(
         <>
+        <ScrollView>
         <Header />
         <View style ={styles.container}>
-            <Text>Scoreboard here...</Text>
+            <Text style = {styles.scoreText}>Scoreboard </Text>
            { scores.length === 0 ?
-            <Text>Scoreboar is empty</Text>
+            <Text style = {styles.scoreText}>Scoreboar is empty</Text>
             :
             scores.map((player, index) => (
                 index < NBR_OF_SCOREBOARD_ROWS &&
@@ -69,16 +71,19 @@ export default Scoreboard = ({ navigation }) => {
             ))
         }
         </View>
-        <View>
-            <Pressable
-            onPress={() => clearScoreboard()}>
-                <Text>CLEAR SCOREBOARD</Text>
-            </Pressable>
+        <View style ={styles.container}>
+            
             <TouchableOpacity
-                 onPress={() => restartGame()} // Add the reset button
+                onPress={() => clearScoreboard()}>
+                <Text style = {styles.clearB}>CLEAR SCOREBOARD</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                 onPress={() => restartGame()} // reset button
                 ><Text style= {styles.restartB}>RESTART GAME</Text></TouchableOpacity>
+                
         </View>
         <Footer />
+        </ScrollView>
         </>
     )
 }

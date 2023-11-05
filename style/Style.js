@@ -9,12 +9,12 @@ export default StyleSheet.create({
   header: {
     marginTop: 5,
     //marginBottom: 15,
-    backgroundColor: '#1D1A39',
+    backgroundColor: '#000000',
     flexDirection: 'row',
   },
   footer: {
     //marginTop: 20,
-    backgroundColor: '#1D1A39',
+    backgroundColor: '#000000',
     flexDirection: 'row'
   },
   title: {
@@ -37,12 +37,10 @@ export default StyleSheet.create({
     margin: 10,
   },
   gameboard: {
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center'
   },
   gameinfo: {
-    backgroundColor: '#fff',
     textAlign: 'center',
     justifyContent: 'center',
     fontSize: 20,
@@ -51,6 +49,9 @@ export default StyleSheet.create({
   row: {
     marginTop: 20,
     padding: 10
+  },
+  dicesrow:{
+    margin: 20,
   },
   flex: {
     flexDirection: "row"
@@ -75,7 +76,7 @@ export default StyleSheet.create({
   headline1:{ //First type your name:
     fontSize:20,
     fontWeight: 'bold',
-    textAlign: 'left', 
+    textAlign: 'center', 
     marginBottom: 10,
     marginLeft: 15, 
   },
@@ -88,7 +89,9 @@ export default StyleSheet.create({
     borderColor: '#000000',
     color:'#000000',
     fontWeight:'bold',
-    fontSize: 20
+    fontSize: 20,
+    width:300,
+    alignSelf: 'center'
   },
   enterB:{ //ensimmäin näkymä ja nimen alapuolella oleva button
     borderWidth: 2,
@@ -101,7 +104,9 @@ export default StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
     fontWeight: 'bold',
-    borderColor:'#000000'
+    borderColor:'#000000',
+    width:300,
+    alignSelf: 'center'
   },
   headline: { //koskettaa ainakin home.js Rules of the game
     fontSize:30,
@@ -113,16 +118,18 @@ export default StyleSheet.create({
     playB: { //Ohjeiden jälkein button
     borderWidth: 2,
     borderRadius: 5,
-    color: 'white',
+    color: '#E5D9B6',
     backgroundColor: '#9F014D',
     padding: 15,
     margin: 10,
-    marginBottom:20,
+    marginBottom:30,
     //marginTop: 20,
     textAlign: 'center',
     fontSize: 20,
     fontWeight: 'bold',
-    borderColor:'#000000'
+    borderColor:'#000000',
+    width:300,
+    alignSelf: 'center'
   },
   infoText: { //Rules of the game, Home.js
     marginLeft: 15,
@@ -130,9 +137,21 @@ export default StyleSheet.create({
     fontSize: 15,
 
   },
+  scoreText: { 
+    marginLeft: 15,
+    marginRight: 15,
+    marginTop:10,
+    marginBottom:15,
+    fontSize: 25,
+    fontWeight: 'bold',
+
+  },
+  datatable: { 
+    fontSize: 35,
+  },
   infoText2: { //Good luck, Home.js
     fontSize: 25,
-    //marginLeft:20, //miten saa keskelle tekstin??
+    //marginLeft:20, 
     textAlign:'center',
     margin: 10,
     fontWeight: 'bold',
@@ -144,6 +163,17 @@ export default StyleSheet.create({
     margin:12,
     
   },
+  throwText:{ //gameboard
+    fontSize:16,
+    textAlign:'left',
+    fontWeight: 'bold',
+    margin: 5,
+    marginLeft: 15,
+  },
+  throwTextView:{
+    margin: 2,
+    marginTop: 10,
+  },
   player:{ //gameboard
     fontSize: 25,
     textAlign: 'center',
@@ -154,12 +184,18 @@ export default StyleSheet.create({
     fontSize:25,
     textAlign:'center',
     fontWeight: 'bold',
+    margin: 10,
+  },
+  bonusPoints:{ //gameboard, 50 bonus points!
+    fontSize:18,
+    textAlign:'center',
+    fontWeight: 'bold',
     margin: 20,
   },
   savePointsB:{ //gameboard
     borderWidth: 2,
     borderRadius: 5,
-    color: 'white',
+    color: '#E5D9B6',
     backgroundColor: '#9F014D',
     padding: 15,
     margin: 10,
@@ -168,8 +204,26 @@ export default StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
     fontWeight: 'bold',
-    borderColor:'#000000'
+    borderColor:'#000000',
+    width:300,
+    alignSelf: 'center'
 
+  },
+  resetB:{ //tyhjentää pelin ja pelaaja voi kokeilla
+    borderWidth: 2,
+    borderRadius: 4,
+    color: 'white',
+    backgroundColor: '#a50505',
+    padding: 5,
+    margin: 5,
+    marginBottom:15,
+    marginTop: 35,
+    textAlign: 'center',
+    fontSize: 15,
+    fontWeight: 'bold',
+    borderColor:'#000000',
+    width:130,
+    alignSelf: 'center'
   },
   restartB:{ //gameboard Käynnistä uudelleen!
     borderWidth: 2,
@@ -177,8 +231,8 @@ export default StyleSheet.create({
     color: 'white',
     backgroundColor: '#a50505',
     padding: 5,
-    margin: 10,
-    marginBottom:20,
+    margin: 5,
+    marginBottom:30,
     //marginTop: 20,
     textAlign: 'center',
     fontSize: 15,
@@ -188,18 +242,36 @@ export default StyleSheet.create({
     alignSelf: 'center'
      
   },
-  throwB:{ //gameboard, Heitä nopat
+  clearB:{ //puhdistaa scoreboardin
     borderWidth: 2,
     borderRadius: 5,
     color: 'white',
     backgroundColor: '#9F014D',
+    padding: 5,
+    margin: 10,
+    marginBottom:20,
+    marginTop: 20,
+    textAlign: 'center',
+    fontSize: 15,
+    fontWeight: 'bold',
+    borderColor:'#000000',
+    width:130,
+    alignSelf: 'center'
+  },
+  throwB:{ //gameboard, throw dices, Heitä nopat
+    borderWidth: 2,
+    borderRadius: 5,
+    color: '#E5D9B6',
+    backgroundColor: '#9F014D',
     padding: 15,
     margin: 10,
     marginBottom:20,
-    //marginTop: 20,
+    marginTop: 20,
     textAlign: 'center',
     fontSize: 20,
     fontWeight: 'bold',
-    borderColor:'#000000'
+    borderColor:'#000000',
+    width:300,
+    alignSelf: 'center'
   },
 });
