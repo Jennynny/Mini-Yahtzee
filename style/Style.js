@@ -80,7 +80,7 @@ export default StyleSheet.create({
     marginBottom: 10,
     marginLeft: 15, 
   },
-  inputName:{ //kirjoita nimesi?
+  inputName:{ //type name?
     borderWidth: 2,
     borderRadius: 5,
     padding: 10,
@@ -93,7 +93,7 @@ export default StyleSheet.create({
     width:300,
     alignSelf: 'center'
   },
-  enterB:{ //ensimmäin näkymä ja nimen alapuolella oleva button
+  enterB:{ //first button, under name
     borderWidth: 2,
     borderRadius: 5,
     color: '#E5D9B6',
@@ -115,7 +115,7 @@ export default StyleSheet.create({
     marginBottom: 20,
     //marginTop: 10, 
   },
-    playB: { //Ohjeiden jälkein button
+    playB: { // button after rules text
     borderWidth: 2,
     borderRadius: 5,
     color: '#E5D9B6',
@@ -209,7 +209,7 @@ export default StyleSheet.create({
     alignSelf: 'center'
 
   },
-  resetB:{ //tyhjentää pelin ja pelaaja voi kokeilla
+  resetB:{ //reset game
     borderWidth: 2,
     borderRadius: 4,
     color: 'white',
@@ -225,7 +225,7 @@ export default StyleSheet.create({
     width:130,
     alignSelf: 'center'
   },
-  restartB:{ //gameboard Käynnistä uudelleen!
+  restartB:{ //restart game
     borderWidth: 2,
     borderRadius: 4,
     color: 'white',
@@ -242,7 +242,7 @@ export default StyleSheet.create({
     alignSelf: 'center'
      
   },
-  clearB:{ //puhdistaa scoreboardin
+  clearB:{ //clear scoreboard
     borderWidth: 2,
     borderRadius: 5,
     color: 'white',
