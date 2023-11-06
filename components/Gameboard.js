@@ -117,7 +117,7 @@ export default Gameboard = ({navigation, route}) => {
             }
                 setDicePointsTotal(points);
                 setSelectedDicePoints(selectedPoints);
-                return points[i]; //testi
+                return points[i]; 
 
         }
         else{
@@ -165,7 +165,7 @@ export default Gameboard = ({navigation, route}) => {
             const newScore = [...scores,playerPoints]; // Add new score to the array
             const jsonValue = JSON.stringify(newScore);
             await AsyncStorage.setItem(SCOREBOARD_KEY, jsonValue);
-            getScoreboardData();    //testirivi
+            getScoreboardData();    
         }
         catch (e) {
             console.log (' Save error: ' + e);
@@ -228,7 +228,7 @@ export default Gameboard = ({navigation, route}) => {
         }
     }
 
-    //resetointi
+    //reset
     const resetDiceSelection = () => {
         let resetDice = new Array(NBR_OF_DICES).fill(false);
         setSelectedDices(resetDice);
@@ -256,7 +256,7 @@ export default Gameboard = ({navigation, route}) => {
             setDicePointsTotal(new Array(NBR_OF_DICES).fill(0));
         };
 
-        //aloittaa pelin kokonaan alusta!
+        //restart game!
         const restartGame = () => {
             navigation.reset({
                 index: 1,
